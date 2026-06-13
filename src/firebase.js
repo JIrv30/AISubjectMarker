@@ -2,14 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBYiyeQN9OUA5huSuXMWuGJKdtTSu7oC2Q",
-  authDomain: "sltbreifing.firebaseapp.com",
-  databaseURL: "https://sltbreifing-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "sltbreifing",
-  storageBucket: "sltbreifing.firebasestorage.app",
-  messagingSenderId: "793608744425",
-  appId: "1:793608744425:web:03a5168a4af40bb749ef78",
-  measurementId: "G-XYB4HGXZ3T"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 export const app = initializeApp(firebaseConfig);
